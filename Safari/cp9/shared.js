@@ -1,0 +1,31 @@
+var backdrop = document.querySelector(".backdrop");
+var modal = document.querySelector(".modal");
+var modalNoButton = document.querySelector(".modal__action--negative");
+var selectPlanButtons = document.querySelector(".plan button");
+var toggleButton = document.querySelector(".toggle-button");
+var mobileNav = document.querySelector(".mobile-nav");
+
+
+for (var i = 0; i < selectPlanButtons.length; i++) {
+    selectPlanButtons[i].addEventListener("click", function () {
+        modal.classList.add("open");
+        backdrop.classList.add("open");
+    });
+}
+
+backdrop.addEventListener("click", function () {
+    mobileNav.classList.remove("opn");
+    closeModal();
+});
+
+function closeModal() {
+    if (modal) {
+        modal.classList.remove("open");
+    }
+    backdrop.classList.remove("open");
+}
+
+toggleButton.addEventListener("click", function () {
+    mobileNav.classList.add("open");
+    backdrop.classList.add("open");
+});
