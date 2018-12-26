@@ -14,7 +14,7 @@ for (var i = 0; i < selectPlanButtons.length; i++) {
 }
 
 backdrop.addEventListener("click", function () {
-    mobileNav.classList.remove("opn");
+    mobileNav.classList.remove("open");
     closeModal();
 });
 
