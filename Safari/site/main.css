@@ -9,7 +9,7 @@
 
 #product-overview h1 {
     color: white;
-    font-family: "Anoton", sans-serif;
+    font-family: "Anton", sans-serif;
     position: absolute;
     bottom: 5%;
     left: 3%;
@@ -80,5 +80,121 @@
 }
 
 @media (min-width: 40rem) {
-    .plan__list
+    .plan__list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plan {
+        width: 30%;
+        min-width: 13rem;
+        max-width: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 28rem;
+    }
+
+    .plan--highlighted {
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        height: 30rem;
+        z-index: 50;
+    }
+}
+
+#key-features {
+    background: #ff1b68;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+#key-features .section-title {
+    color: white;
+    margin: 2rem;
+}
+
+.key-feature__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.key-feature__image {
+    background: #ffcede;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #424242;
+    border-radius: 50%;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.key-feature__description {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 40rem) {
+    .key-feature {
+        width: 30%;
+        max-width: 25rem;
+    }
+
+    .key-feature__list {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    z-index: 200;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal__title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+    text-align: center;
+}
+
+.modal__action {
+    border: 1px solid #0e4f1f;
+    text-decoration: none;
+    color: white;
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+    background: #2ddf5c;
+    border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+    background: red;
+    border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+    background: #ff5454;
+    border-color: #ff5454;
 }
